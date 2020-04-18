@@ -148,9 +148,21 @@ class ControllerTest {
 
     @Test
     void testConvertToHex() {
+        assertEquals("A", controller.convertToHex(10.0));
+        assertEquals("A2", controller.convertToHex(162.0));
+        assertEquals("0", controller.convertToHex(0.0));
+        assertEquals("AA", controller.convertToHex(170.0));
+        assertEquals("5", controller.convertToHex(5.0));
+        assertEquals("11", controller.convertToHex(17.0));
     }
 
     @Test
     void testConvertToDec() {
+        assertEquals(10.0, controller.convertToDec("A"));
+        assertEquals(162.0, controller.convertToDec("A2"));
+        assertEquals(0.0, controller.convertToDec("0"));
+        assertEquals(170.0, controller.convertToDec("AA"));
+        assertEquals(5.0, controller.convertToDec("5"));
+        assertEquals(17.0, controller.convertToDec("11"));
     }
 }

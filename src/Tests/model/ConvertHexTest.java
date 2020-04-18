@@ -9,7 +9,7 @@ class ConvertHexTest {
     private ConvertHex testClass = new ConvertHex();
 
     @Test
-    void toNumber() {
+    void toDec() {
         assertEquals(10.0, testClass.toDec("A"));
         assertEquals(162.0, testClass.toDec("A2"));
         assertEquals(0.0, testClass.toDec("0"));
